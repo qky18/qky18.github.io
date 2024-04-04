@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Blogs
 permalink: /blogs/
 ---
@@ -92,16 +92,49 @@ permalink: /blogs/
   {% endif %}
 </div>
 
-<!--不算子网站访客统计-->
+<!-- 不算子网站访客统计
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-<!-- pv的方式，单个用户连续点击n篇文章，记录n次访问量 -->
 <div align="center">
 	<span id="busuanzi_container_site_pv" style="font-family:Consolas;color:Silver;font-size:12px;">
 		View:<span id="busuanzi_value_site_pv" style="font-family:Consolas;color:Silver;font-size:12px;"></span>
 	</span>
-	<!-- uv的方式，单个用户连续点击n篇文章，只记录1次访客数 -->
 	<span id="busuanzi_container_site_uv" style="font-family:Consolas;color:Silver;font-size:12px;">
 		User:<span id="busuanzi_value_site_uv" style="font-family:Consolas;color:Silver;font-size:12px;"></span>
 	</span>
+</div> -->
+
+<div class="tags">
+  <ul class="label">
+    {% for tag in site.tags %}
+    <li>
+      <a href="#{{ tag[0] }}">
+        <span>{{ tag[0] }}</span>
+        <span class="count">{{ tag[1] | size }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% for tag in site.tags %}
+    <h2 id="{{ tag[0] }}">
+      {{ tag[0] }}
+    </h2>
+    <ul class="tag">
+      {% for post in tag[1] %}
+        {% if post.title != null %}
+          <li>
+            {% if post.link %}
+              <a href="{{ post.link }}">
+            {% else %}
+              <a href="{{ site.baseurl }}{{ post.url }}">
+            {% endif %}
+                {{ post.title }}
+              </a>
+              <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
 </div>
