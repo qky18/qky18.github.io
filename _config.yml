@@ -1,8 +1,8 @@
 name: "Keyue Qiu (邱可玥)"
 description: "PhD Student @ Tsinghua University"
 
-avatar: ./images/avatar.png
-favicon: ./images/favicon.ico
+avatar: https://qky18.github.io/images/avatar.png
+favicon: https://qky18.github.io/images/favicon.ico
 
 navigation:
   - name: Homepage
