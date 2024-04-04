@@ -7,8 +7,8 @@ favicon: https://github.com/qky18/qky18.github.io/tree/master/images/favicon.ico
 navigation:
   - name: Homepage
     url: /
-  - name: CV
-    url: /asset/kyqiu.pdf
+  # - name: CV
+  #   url: /asset/kyqiu.pdf
   - name: Blog
     url: /blogs
 
