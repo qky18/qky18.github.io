@@ -11,6 +11,8 @@ navigation:
   #   url: /asset/kyqiu.pdf
   - name: Blog
     url: /blogs
+  - name: Google Scholar
+    url: https://scholar.google.com/citations?user=3qx8FS4AAAAJ
 
 paginate: 8
 
