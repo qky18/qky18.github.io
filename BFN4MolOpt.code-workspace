@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../BFN4MolOpt"
+		},
+		{
+			"path": "../codeCodesign/mol_opt"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
